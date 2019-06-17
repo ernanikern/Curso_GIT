@@ -1,18 +1,56 @@
 <html>
-    <head>
-    </head>
-    <body>
-	<h1>Página Inicial do Curso GIT</h1></br>
-        <h1>Git</h1>
-        <h2>Trabalhando em Equipe com Controle e Segurança</h2>
+  <head>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <h4><i>07/06/2019</i></h4>
 
-        <p>Um curso que explora os benefícios de utilizar o Git como ferramenta de controle de versão para projetos em qualquer linguagem, em qualquer plataforma.</p>
+    <h1>Utilização do GIT/Tutorial Git</h1>
 
-        <h3>Principais benefícios:</h3>
-        <ul>
-            <li>Funciona de maneira distribuída</li>
-            <li>Permite a edição concorrente de arquivos do projeto</li>
-            <li>Não depende de uma conexão ativa com um servidor</li>
-        </ul>
-    </body>
+    <h3># GitHub: plataforma online para hospedagem de repositórios do Git</h3>
+
+    <h3># Comandos: </h3>
+    <ul>
+      <li>git init: executado dentro de um diretório específico, indica ao git que ali será um repositório</li>
+      <li>git clone URL.git [nome_alt]: clona um repositório para a máquina local, pode-se botar um nome alternativo</li>
+      <li>git tag: mostra as versões gravadas, podendo retornar a elas</li>
+      <li>git checkout v0.1: retorna o repositório à versão desejada, sem eliminar as mais novas</li>
+      <li>git diff v0.1 v0.2: mostra as diferenças entre versões</li>
+      <li>git blame <file>: quem alterou o que no arquivo</li>
+      <li>git ls-files: lista os arquivos pertencentes ao repositório</li>
+      <li>git status: retorna o status dos arquivos do repositório</li>
+      <ul>
+        <li>possíveis estados: </li>
+          <li>untracked: arquivos não adicionados ao git</li>
+          <li>to be commited: arquivos inseridos/alterados que não foram ‘commited’**</li>
+          <li>not staged to be commited: arquivos do repositório alterados (é preciso usar ‘git add’ novamente)</li>
+      </ul>
+      <li>git add <file>: adiciona <file> ao repositório, para ser rastreado</li>
+      <li>git add -i: modo interativo do git add</li>
+      <li>git commit -m “xxxx”: executa o commit do repositório incluindo um comentário</li>
+      <li>git remote add &lt;alias&gt; &lt;url&gt;.git: adiciona um repositório remoto</li>
+      		<ul><li>O alias deve ser único (localmente) e o repositório deve existir</li></ul>
+      <li>git push &lt;alias&gt; master: envia as mudanças para o repositório remoto</li>
+      		<ul><li>'master' é o branch onde os arquivos serão enviados</li></ul>
+    </ul>
+
+		<h5>** COMMIT:</h5> o comando ‘commit’ “entrega” os arquivos pertencentes ao git ao seu repositório; para serem entregues os arquivos devem ter o estato ‘changes do be commited’, conforme comando status acima; para realizar o commit, deve ser configurado o responsável pelo comando, com os comandos
+			<ul>
+			<li>git config user.name “user”</li>
+			<li>git config user.email “email”		ou</li>
+			<li>git config --global user.name “name”   - aplica para todos os repositórios</li>
+			<li>git config --global user.email “email” </li>
+			</ul>
+	
+		<h3># Estágios do GIT: </h3>
+
+		<ol>
+			<li>Working directory: quando o repositório é criado, mas sem arquivos a serem rastreados; o WD pode estar limpo, quando não há diferença entre arquivos armazenados e seu estado atual, ou sujo, quando há diferenças.</li>
+			<i>“Representa o estado atual dos arquivos no repositório”</i>
+			<li>Index ou Staging area: após a execução do comando ‘git add ..’, criando o vínculo com os diretórios ou arquivos informados. </li>
+			<i>“Visão preliminar das modificações do repositório”</i>
+			<li>Head: terceiro estágio, após a execução do ‘git commit’, para persistir o conteúdo do repositório</li>
+			<i>“Referência do trabalho com o Working Directory”</i>
+		</ol>
+	</body>
 </html>
