@@ -61,8 +61,10 @@
 	<h3># Branches: </h3>
 	
 	Branches são usados geralmente quando há mais colaboradores em um projeto, onde cada um deles trata de partes específicas desse projeto; assim, podem existir, além do branch principal, <b><i>Master,</i></b>, outros, como por exemplo <b><i>Html, Layout, Codigo ,Banco,</i></b> etc.
-		<ul>Comandos com branches: 
+		<ul>Comandos com branches: <br><br>
 			<li>git branch [name]: mostra os branches existentes, ou cria a branch 'name'</li>
+			<li>git branch -r: mostra os branches remotos</li>
+			<li>git branch -t 'name' origin/'name': cria localmente a branch 'name', após a branch ter sido sincronizada com 'git pull' - nesses casos, a branch não é criada localmente - o parâmetro '-t' indica que a branch local deve seguir a remota</li>
 			<li>git checkout 'branch': altera para a branch 'name'</li>
 		</ul>
 		
