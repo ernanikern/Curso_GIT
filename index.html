@@ -3,7 +3,7 @@
     <meta charset="UTF-8"/>
     <style type = "text/css">
   		body {
-  		font-family: "Comic Sans MS";
+  		font-family: "Arial";
   		}
  	</style>
   </head>
@@ -46,7 +46,7 @@
       <li>git push -u origin master | git push --set-upstream origin master: deixa o branch master remota atrelada ao branch master local, fazendo que os próximos 'push' possam ser passados sem parâmetros</li>
     </ul>
 
-		<h5>** COMMIT:</h5> o comando ‘commit’ “entrega” os arquivos pertencentes ao git ao seu repositório; para serem entregues os arquivos devem ter o estato ‘changes do be commited’, conforme comando status acima; para realizar o commit, deve ser configurado o responsável pelo comando, com os comandos
+		<h5>** COMMIT:</h5><pre> o comando ‘commit’ “entrega” os arquivos pertencentes ao git ao seu repositório; para serem entregues os arquivos devem ter o estato ‘changes do be commited’, conforme comando status acima; para realizar o commit, deve ser configurado o responsável pelo comando, com os comandos</pre>
 			<ul>
 			<li>git config user.name “user”</li>
 			<li>git config user.email “email”		ou</li>
@@ -64,8 +64,11 @@
 
 	<h3># Branches: </h3>
 	
-<pre>	Branches são usados geralmente quando há mais colaboradores em um projeto, onde cada um deles trata de partes específicas desse projeto; assim, podem existir, além do branch principal, <b><i>Master,</i></b>, outros, como por exemplo <b><i>Html, Layout, Codigo ,Banco,</i></b> etc.</pre>
-		 		
+	Branches são usados geralmente quando há mais colaboradores em um projeto, onde cada um deles trata de partes específicas desse projeto; assim, podem existir, além do branch principal, <b><i>Master,</i></b>, outros, como por exemplo <b><i>Html, Layout, Codigo ,Banco,</i></b> etc.
+		<ul>Comandos com branches: 
+			<li>git branch [name]: mostra os branches existentes, ou cria a branch 'name'</li>
+			<li>git checkout 'branch': altera para a branch 'name'</li>
+		</ul>
 		
 	<h3># Estágios do GIT: </h3>
 
