@@ -40,7 +40,9 @@
       <li>git log: mostra o log de 'commits' realizados no projeto</li>
       <li>git whatchanged: mais detalhado que o log, mostra o que foi alterado por cada commit</li>
       <li>git push -u origin master | git push --set-upstream origin master: deixa o branch master remota atrelada ao branch master local, fazendo que os próximos 'push' possam ser passados sem parâmetros</li>
-      <li>git fetch origin: verifica todas as atualizações feitas no repositório referentes ao origin</li>
+      <li>git fetch origin: verifica todas as atualizações feitas no repositório referentes ao origin (útil para descobrir novos branches</li>
+      <li>git push -d origin branch: deleta a branch remoto branch</li>
+      <li>git push origin :branch: deleta o branch remoto branch</li>
     </ul>
 
 		<h5>** COMMIT:</h5><h6> o comando ‘commit’ “entrega” os arquivos pertencentes ao git ao seu repositório; para serem entregues os arquivos devem ter o estato ‘changes do be commited’, conforme comando status acima; para realizar o commit, deve ser configurado o responsável pelo comando, com os comandos</h6>
@@ -67,6 +69,8 @@
 			<li>git checkout 'branch': altera para a branch 'name'</li>
 			<li>git branch -r: mostra os branches existentes no repositório remoto</li>
 			<li>git branch -t 'branch' origin/'branch': cria localmente a nova branch 'branch' e a sincroniza com a branch remota existente</li>
+			<li>git checkout -b 'branch': cria a nova branch e já alterna para ela</li>
+			<li>git branch -a: lista as branches locais e remotas</li>
 		</ul>
 		
 	<h3># Estágios do GIT: </h3>
