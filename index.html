@@ -52,7 +52,8 @@
 			<li>git config --global user.name “name”   - aplica para todos os repositórios</li>
 			<li>git config --global user.email “email” </li>
 			</ul>
-	
+		<h5>** Mesmo arquivo com alterações distintas, não sincronizadas: caso um mesmo arquivo seja alterado de forma distinta em dois repositórios locais, ocorrerá um conflito quando forem sincronizados para o repositório remoto. O primeiro arquivo a ter o 'git push' não terá problema, mas o segundo sim, pois o arquivo a ser enviado não terá apenas adições ao atual. O segundo 'git push' gerará um erro, que informará que deve ser feito primeiro um 'git pull', que fará um merge dos arquivos. Após isso, pode-se fazer o 'git push' novamente. </h5>	
+
 		<h3># Workflow com repositório remoto</h3>
 
 			<ol>
