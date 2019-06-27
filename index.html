@@ -56,7 +56,7 @@
 			</ul></h5>
 	
 		<h5>** <u>Mesmo arquivo com alterações distintas, não sincronizadas:</u> caso um mesmo arquivo seja alterado de forma distinta em dois repositórios locais, ocorrerá um conflito quando forem sincronizados para o repositório remoto. O primeiro arquivo a ter o 'git push' não terá problema, mas o segundo sim, pois o arquivo a ser enviado não terá apenas adições ao atual. O segundo 'git push' gerará um erro, que informará que deve ser feito primeiro um 'git pull', que fará um merge dos arquivos. Após isso, pode-se fazer o 'git push' novamente. Caso o merge automático falhe, devido à alterações nos mesmos trechos, deve-se editar manualmente. 
-		No caso da falha do merge, o arquivo receberá, entre a edição local, os símbolos '<<<<< HEAD' e '=====', e entre este último e '>>>>> <id commit>' a alteração feita em outro local.</h5>	
+		<br/>No caso da falha do merge, o arquivo receberá, entre a edição local, os símbolos '<<<<< HEAD' e '=====', e entre este último e '>>>>> <id commit>' a alteração feita em outro local.</h5>	
 
 		<h3># Workflow com repositório remoto</h3>
 
