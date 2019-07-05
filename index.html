@@ -40,11 +40,19 @@
       <li>git log: mostra o log de 'commits' realizados no projeto</li>
       <li>git whatchanged: mais detalhado que o log, mostra o que foi alterado por cada commit</li>
       <li>git push -u origin master | git push --set-upstream origin master: deixa o branch master remota atrelada ao branch master local, fazendo que os próximos 'push' possam ser passados sem parâmetros</li>
-      <li>git fetch origin: verifica todas as atualizações feitas no repositório referentes ao origin (útil para descobrir novos branches</li>
+      <li>git fetch origin: verifica todas as atualizações feitas no repositório referentes ao origin (útil para descobrir novos branches)</li>
       <li>git push -d origin branch: deleta a branch remoto branch</li>
       <li>git push origin :branch: deleta o branch remoto branch</li>
       <li>git mergetool --tool-help: mostra os aplicativos disponíveis para resolver conflitos de merge de forma mais simples</li>
-      <li>git mergetool -t <programa>: abre o programa de edição (p. ex. vimdiff) para resolver conflitos</li>
+      <li>git mergetool -t &lt;programa&gt;: abre o programa de edição (p. ex. vimdiff) para resolver conflitos</li>
+      <li>git checkout &lt;arquivo&gt;: descarta as alterações de um arquivo que esteja no estágio 'working directory' (arquivos alterados, mas sem 'add' e 'commit') - o arquivo volta ao estado 'head' da branch atual</li>
+      <li>git checkout 'branch' 'arquivo': trás o arquivo do branch especificado para o branch atual</li>
+      <li>git reset HEAD 'arquivo': retorna o arquivo que estava no estágio Index (pós 'git add') para o estado HEAD (commit anterior) **com isso, o arquivo ficará no 'working directory', e suas alterações podem ser descartadas com 'git checkout "arquivo"'.</li>
+      <li>git stash: salva as alterações de 'working directory' e 'index' em uma área especial, e restaura o repositório local para o último HEAD; retorna ao estado original com 'git stash pop' </li>
+      <li>git stash pop: retorna ao estado anterior ao último 'git stash' executado</li>
+      <li>git stash list: mostra os stashes existentes no repositório</li>
+      <li>git stash pop stash@{n}: retorna ao estado do stash número 'n' executado</li>
+      <li>git reset 'commit hash': retorna ao commit (HEAD) cujo hash foi copiado (obtido com 'git log')</li>
     </ul>
 
 		<h5>** <u>COMMIT</u>: o comando ‘commit’ “entrega” os arquivos pertencentes ao git ao seu repositório; para serem entregues os arquivos devem ter o estato ‘changes do be commited’, conforme comando status acima; para realizar o commit, deve ser configurado o responsável pelo comando, com os comandos abaixo:
@@ -74,8 +82,10 @@
 			<li>git checkout 'branch': altera para a branch 'name'</li>
 			<li>git branch -r: mostra os branches existentes no repositório remoto</li>
 			<li>git branch -t 'branch' origin/'branch': cria localmente a nova branch 'branch' e a sincroniza com a branch remota existente</li>
-			<li>git checkout -b 'branch': cria a nova branch e já alterna para ela</li>
+			<li>git checkout -b 'branch': cria a nova branch local e já alterna para ela</li>
 			<li>git branch -a: lista as branches locais e remotas</li>
+			<li>git merge &lt;branch&gt;: 'trás' os commits feitos na branch <branch>, para a branch atual (master, nesse caso); esses commits irão, com o 'git push', para a branch master remota.</li>
+			<li>git rebase &lt;branch_base&gt; &lt;branch_p_atualizar&gt;: atualiza uma branch com base em outra.</li>
 		</ul>
 		
 	<h3># Estágios do GIT: </h3>
