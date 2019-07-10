@@ -112,5 +112,11 @@
 		<li>Head: terceiro estágio, após a execução do ‘git commit’, para persistir o conteúdo do repositório</li>
 			<i>“Referência do trabalho com o Working Directory”</i>
 	</ol>
-	</body>
+	
+	<h3># Fork</h3>
+	<p>Na página do GitHub, ao acessar um repositório, existe o botão 'Fork'; ele permite criar uma cópia daquele repositório (que geralmente é de outra pessoa, e privado), para que possamos fazer o clone e trabalhar nele, em sua cópia particular.</p>
+	<p>No caso do software livre, se fizermos uma melhoria num projeto e queremos sujeitar nossas contribuições aos desenvolvedores principais (quando o git push também é bloqueado), podemos pedir aos presponsáveis para usar nossos commits fazendo um <b>Pull Request</b>, também feito dentro da página do GitHub, informando quais usuários serão notificados do request, e a descrição dos commits que desejamos incorporar ao projeto. Após isso, basta aguardar se o request será aceito ou não.</p>
+	<p>Durante o trabalho no repositório local, deve-se cuidar pois o repositório privado remoto pode estar sendo modificado. Para resolver isso, pode-se adicionar a relação entre o nosso fork e o repositório remoto, com <i>git remote add origin 'repo remoto'</i>;</p>
+	<p>Para baixar alterações, usa-se <b>git fetch origin</b>, que baixa para a máquina local apenas as alterações, sem aplicá-las ainda. </p>
+	<p>Para aplicar essas alterações, deve-se usar <b>git merge origin/master</b>.</p>
 </html>
