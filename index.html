@@ -29,9 +29,9 @@
       <li>git add <file>: adiciona <file> ao repositório, para ser rastreado</li>
       <li>git add -i: modo interativo do git add</li>
       <li>git commit -m “xxxx”: executa o commit do repositório incluindo um comentário</li>
-      <li>git remote add &lt;alias&gt; &lt;url&gt;.git: adiciona um repositório remoto</li>
+      <li>git remote add 'alias' 'url'.git: adiciona um repositório remoto</li>
       		<ul><li>O alias deve ser único (localmente) e o repositório deve existir</li></ul>
-      <li>git push &lt;alias&gt; master: envia as mudanças para o repositório remoto</li>
+      <li>git push 'alias' master: envia as mudanças para o repositório remoto</li>
    		<ul>
       		<li>'master' é o branch onde os arquivos serão enviados</li>
       		<li>O 'git add' e o 'git commit' devem ser executados antes</li>	
@@ -44,8 +44,8 @@
       <li>git push -d origin branch: deleta a branch remoto branch</li>
       <li>git push origin :branch: deleta o branch remoto branch</li>
       <li>git mergetool --tool-help: mostra os aplicativos disponíveis para resolver conflitos de merge de forma mais simples</li>
-      <li>git mergetool -t &lt;programa&gt;: abre o programa de edição (p. ex. vimdiff) para resolver conflitos</li>
-      <li>git checkout &lt;arquivo&gt;: descarta as alterações de um arquivo que esteja no estágio 'working directory' (arquivos alterados, mas sem 'add' e 'commit') - o arquivo volta ao estado 'head' da branch atual</li>
+      <li>git mergetool -t 'programa': abre o programa de edição (p. ex. vimdiff) para resolver conflitos</li>
+      <li>git checkout 'arquivo': descarta as alterações de um arquivo que esteja no estágio 'working directory' (arquivos alterados, mas sem 'add' e 'commit') - o arquivo volta ao estado 'head' da branch atual</li>
       <li>git checkout 'branch' 'arquivo': trás o arquivo do branch especificado para o branch atual</li>
       <li>git reset HEAD 'arquivo': retorna o arquivo que estava no estágio Index (pós 'git add') para o estado HEAD (commit anterior) **com isso, o arquivo ficará no 'working directory', e suas alterações podem ser descartadas com 'git checkout "arquivo"'.</li>
       <li>git stash: salva as alterações de 'working directory' e 'index' em uma área especial, e restaura o repositório local para o último HEAD; retorna ao estado original com 'git stash pop' </li>
@@ -97,8 +97,8 @@
 			<li>git branch -t 'branch' origin/'branch': cria localmente a nova branch 'branch' e a sincroniza com a branch remota existente</li>
 			<li>git checkout -b 'branch': cria a nova branch local e já alterna para ela</li>
 			<li>git branch -a: lista as branches locais e remotas</li>
-			<li>git merge &lt;branch&gt;: 'trás' os commits feitos na branch <branch>, para a branch atual (master, nesse caso); esses commits irão, com o 'git push', para a branch master remota.</li>
-			<li>git rebase &lt;branch_base&gt; &lt;branch_p_atualizar&gt;: atualiza uma branch com base em outra.</li>
+			<li>git merge 'branch': 'trás' os commits feitos na branch <branch>, para a branch atual (master, nesse caso); esses commits irão, com o 'git push', para a branch master remota.</li>
+			<li>git rebase 'branch_base' 'branch_p_atualizar': atualiza uma branch com base em outra.</li>
 		</ul>
 		
 	<h3># Estágios do GIT: </h3>
