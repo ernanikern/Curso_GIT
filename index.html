@@ -49,7 +49,8 @@
       <li>git checkout 'branch' 'arquivo': trás o arquivo do branch especificado para o branch atual</li>
       <li>git reset HEAD 'arquivo': retorna o arquivo que estava no estágio Index (pós 'git add') para o estado HEAD (commit anterior) **com isso, o arquivo ficará no 'working directory', e suas alterações podem ser descartadas com 'git checkout "arquivo"'.</li>
       <li>git stash: salva as alterações de 'working directory' e 'index' em uma área especial, e restaura o repositório local para o último HEAD; retorna ao estado original com 'git stash pop' </li>
-      <li>git stash pop: retorna ao estado anterior ao último 'git stash' executado</li>
+      <li>git stash pop: retorna ao estado anterior ao último 'git stash' executado e o remove da pilha</li>
+      <li>git stash apply: retorna ao stash solicitado e o mantém na pilha</li>
       <li>git stash list: mostra os stashes existentes no repositório</li>
       <li>git stash pop stash@{n}: retorna ao estado do stash número 'n' executado</li>
       <li>git reset 'commit hash': retorna ao commit (HEAD) cujo hash foi copiado (obtido com 'git log')</li>
