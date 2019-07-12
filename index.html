@@ -66,7 +66,7 @@
     	<li>git checkout 'commit hash': retorna ao commit indicado, temporariamente</li>
       	<li>git checkout HEAD: retorna ao HEAD do repositório local</li>
       	<li>git bisect start: inicia uma sessão bisect</li>
-      	<li>git bisect bad HEAD: marca o commit HEAD com ruim (contém bug)</li>
+      	<li>git bisect bad HEAD: marca o commit HEAD como ruim (contém bug)</li>
       	<li>git bisect good 'commit hash': marca o commit indicado como OK</li>
     </ol>
 
@@ -124,5 +124,11 @@
 	<h3># Pull Requests</h3>
 	<p>Ao receber um pull request, o responsável pelo repositório deve decidir se o aceita ou não. Caso o aceite, deverá verificá-lo e incluí-lo no repositório usando as ferramentas necessárias (diff, merge, etc). </p>
 	<p>Os administradores de repositórios podem ver o botão <b>Merge Pull Request</b> na tela do GitHub, e ele traz os commits do request automaticamente.</p>
+	
+	<h3># Glossário</h3>
+	<ul>
+		<li>Staged: arquivo que está 'trackeado', ou seja, no Index. </li>
+		<li>Unstaged: arquivo alterado, não trackeado, no working directory</li>	
+	</ul>
 	</body>
 </html>
